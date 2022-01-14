@@ -65,7 +65,7 @@ try:
 
     else:
         data = df.loc[companies]
-        st.write('### 株価(USD', data.sort_index() )
+        st.write('### 株価(USD)', data.sort_index() )
         data = data.T.reset_index()
         data = pd.melt(data, id_vars=['Date']).rename(
             columns={'value': 'Stock Prices(USD)'}
